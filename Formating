@@ -17,7 +17,7 @@ def message(names, amounts):
         for name in names:
             new_amount=text = "%.2f" %(amounts[i])
             message=unf_message.format(
-                    name=name,
+                    name=name[0].upper() + name[1:].lower() ,
                     date=datetime.date.today(),
                     amount=new_amount)
             i +=1
