@@ -1,0 +1,26 @@
+import datetime 
+dnames = ["Justin", "john", "Emilee", "Jim", "Ron", "Sandra", "veronica", "Whitney"]
+damounts = [123.32, 94.23, 124.32, 323.4, 23, 322.122323, 32.4, 99.99]
+
+unf_message = """Hi {name}! 
+Thank you for the purchase on {date}. 
+We hope you are exicted about using it. Just as a
+reminder the purcase total was ${amount}.
+Have a great one!
+Team CFE
+"""
+
+def message(names, amounts):
+    message=[]
+    if len(names)==len(amounts):
+        i=0
+        for name in names:
+            new_amount=text = "%.2f" %(amounts[i])
+            message=unf_message.format(
+                    name=name,
+                    date=datetime.date.today(),
+                    amount=new_amount)
+            i +=1
+            print(message)
+
+message(dnames,damounts)
